@@ -7,9 +7,9 @@ import Vue from 'vue'
 import ElementUI from 'element-ui';
 import Router from "vue-router";
 import 'element-ui/lib/theme-chalk/index.css';
-import APP from "./APP.vue"
-import topHeader from './components/topHeader.vue'
-import training from './components/training.vue'
+import App from "./App.vue"
+import TopHeader from './components/TopHeader.vue'
+import Training from './components/Training.vue'
 
 Vue.use(Router);
 Vue.use(ElementUI);
@@ -20,8 +20,8 @@ const myRouter =  new Router({
         {
             path:'/',
             components:{
-                topHeader,
-                training,
+                TopHeader,
+                Training,
             }
         }
     ]
@@ -30,6 +30,6 @@ const myRouter =  new Router({
 
 new Vue({
      el:'.app',
-     myRouter,
-     render: h =>h(APP)
+     router: myRouter,
+     render: h =>h(App)
  })
