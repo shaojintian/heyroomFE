@@ -4,12 +4,18 @@
 //vue
 
 import Vue from 'vue'
-import hello from './components/hello.vue'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import topHeader from './components/topHeader.vue'
+import training from './components/training.vue'
 
-let app1 = new Vue({
+Vue.use(ElementUI);
+
+ new Vue({
     el:'.app', 
     components:{
-        hello
+        topHeader,
+        training,
     },
-    template:`<hello/>`
+    template: `<topHeader/> `
 })

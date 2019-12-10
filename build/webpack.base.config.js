@@ -7,7 +7,7 @@ module.exports = {
         filename: 'app.js'
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx'],
+        extensions: ['.js', '.ts', '.tsx','.vue'],
         alias:{
             vue: 'vue/dist/vue.esm.js'
         }
@@ -20,11 +20,9 @@ module.exports = {
             },
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader',
+                loader: 'ts-loader',
                 options: {
-                  getCustomTransformers: () => ({
-                    before: [ tsImportPluginFactory( /** options */) ]
-                  }),
+                    appendTsSuffixTo: [/\.vue$/],
                 },
                 exclude: /node_modules/
             },
@@ -35,7 +33,18 @@ module.exports = {
                     'css-loader'
                         
                 ]
-            }
+            },
+            {
+
+                test: /\.(png|jpg|gif|svg|ttf|woff)$/,
+              
+                loader: 'file-loader',
+              
+                options: {
+              
+                  name: '[name].[ext]?[hash]'
+                }
+              }
         ]
     },
     plugins: [
