@@ -33,7 +33,7 @@
       <el-menu-item index="7-1">福利专区</el-menu-item>
       <el-menu-item index="7-1">精选文章</el-menu-item>
   </el-submenu>
-  <el-menu-item index="8"><a href="https://about.liuxueheyroom.cn" target="_blank">认识我们</a></el-menu-item>
+  <el-menu-item index="8">认识我们</el-menu-item>
 </el-menu>
 
      </div>

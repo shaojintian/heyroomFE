@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <router-view></router-view>
+        <router-view name="TopHeader"></router-view>
+        <!-- why no training-->
+        <router-view name="Training"></router-view>
     </div>
 </template>
 
